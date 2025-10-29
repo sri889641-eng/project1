@@ -46,6 +46,8 @@ Instead of loading entire new pages from the server, SPAs use JavaScript to upda
    Requires careful handling of API requests and user data on the client side.
 5. **Complex Debugging:**
    Debugging client-side routing and state management can be more complicated.
-Github repository link:
+   
+Github repository link:https://github.com/sri889641-eng/project1.git
+Live deployment link:
 
-Would you like me to make this into a **README.md section** for your Naan Mudhalvan frontend project (with markdown styling and emojis)?
+
