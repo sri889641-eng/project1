@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple SPA Example</title>
+  </head>
+  <body>
+    <style>
+         body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f7f7f7;
+      color: #333;
+    }
+
+    header {
+      background: #0078d7;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #005fa3;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #00497d;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .page {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+  </style>
+    </style>
+    <header>
+      <h1>My Single Page Application</h1>
+    </header>
+
+    <nav>
+      <a href="#home" onclick="navigate('home')">Home</a>
+      <a href="#about" onclick="navigate('about')">About</a>
+      <a href="#contact" onclick="navigate('contact')">Contact</a>
+    </nav>
+
+    <main>
+      <section id="home" class="page active">
+        <h2>Welcome Home!</h2>
+        <p>This is the home page of our simple single page application.</p>
+      </section>
+
+      <section id="about" class="page">
+        <h2>About Us</h2>
+        <p>
+          This app demonstrates how to create an SPA using only HTML, CSS, and
+          JavaScript — no frameworks needed!
+        </p>
+      </section>
+
+      <section id="contact" class="page">
+        <h2>Contact Us</h2>
+        <p>ContactEmail: sri889641@gmail.com</p>
+        <p>Contactnumber: 7639074693</p>
+        <p></p>
+      </section>
+    </main>
+     <script>
+    // Basic SPA navigation
+    function navigate(pageId) {
+      // Hide all pages
+      document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+      });
+      
+      // Show the selected page
+      document.getElementById(pageId).classList.add('active');
+      
+      // Update the URL hash
+      window.location.hash = pageId;
+    }
+
+    // Load the correct page on refresh or direct link
+    window.addEventListener('load', () => {
+      const hash = window.location.hash.substring(1) || 'home';
+      navigate(hash);
+    });
+  </script>
+</body>
+</html>
