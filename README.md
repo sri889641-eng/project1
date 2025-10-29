@@ -48,6 +48,8 @@ Instead of loading entire new pages from the server, SPAs use JavaScript to upda
    Debugging client-side routing and state management can be more complicated.
    
 Github repository link:https://github.com/sri889641-eng/project1.git
-Live deployment link:
+Live deployment link: https://sri889641-eng.github.io/project1/
+DEVELOPED BY,
+M.Nithyasri
 
 
